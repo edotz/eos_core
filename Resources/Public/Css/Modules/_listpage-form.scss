@@ -1,0 +1,93 @@
+#ic_core_search.listpage-form {
+  .has-checkbox-group {
+    margin-top: 25px;
+    @media only screen and (max-width : $screen-lg) {
+      margin-top: 22px;
+    }
+    @media only screen and (max-width : $screen-md) {
+      margin-top: 0;
+    }
+  }
+  .wohnwagen-group {
+    .wohnwagen {
+      margin: 42px auto 0;
+      @media only screen and (max-width : $screen-md) {
+        margin-top: 0;
+      }
+    }
+  }
+  .row-full {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.16);
+    @media only screen and (max-width : $screen-md) {
+      border-bottom-left-radius: 0;
+    }
+  }
+  .advanced-search {
+    @media only screen and (max-width : $screen-md) {
+      display: block !important;
+      width: 100%;
+      border-bottom-left-radius: $startpageform-border-radius;
+    }
+    .ohne_change-buttons {
+      @media only screen and (max-width : $screen-md) {
+        border-bottom-left-radius: $startpageform-border-radius;
+      }
+      @media only screen and (max-width : $screen-xs) {
+        border-radius: 0;
+      }
+    }
+    .ohne_change-buttons:after,
+    .ohne_change-buttons:before {
+      @media only screen and (max-width : $screen-md) {
+        display: none !important;
+      }
+    }
+    input[type=submit] {
+      @media only screen and (max-width : $screen-md) {
+        margin: 15px auto 20px;
+      }
+    }
+  }
+  .has-radio-button-as-icon-group {
+    .integrierter,
+    .kastenwagen {
+      label {
+        margin-left: 20px;
+        @media only screen and (max-width : $screen-md) {
+          margin-left: 0;
+        }
+      }
+    }
+    .integrierter,
+    .alkoven {
+      label {
+        margin-top: 7px;
+        @media only screen and (max-width : $screen-md) {
+          margin-top: 0;
+        }
+      }
+    }
+    .kastenwagen,
+    .teilintegrierter {
+      label {
+        margin-bottom: 0px;
+        @media only screen and (max-width : $screen-md) {
+          margin-bottom: 7px;
+        }
+      }
+    }
+  }
+  .col-xs-row {
+    .has-select-group {
+      @media only screen and (max-width : $screen-md) {
+        float: left;
+        width: calc(50% - 15px);
+        margin-right: 15px;
+        &:nth-of-type(2) {
+          margin-left: 15px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

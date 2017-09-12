@@ -1,0 +1,25 @@
+.parallax {
+  height: auto;
+  min-height: 33vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+  position: relative;
+  background-attachment: fixed;
+  @media screen and (max-width: $screen-md) {
+    // background-image: none !important;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  h2 {
+    margin: 0;
+  }
+  .font-size-28 {
+    font-size: 28px;
+    text-transform: none;
+    margin-bottom: 35px;
+  }
+}
+

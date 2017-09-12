@@ -1,0 +1,301 @@
+.navbar-default {
+  border-bottom: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: $navbar--background-color;
+  color: $navbar--color;
+  height: $navbar-height;
+  min-height: $navbar-height;
+  border: none;
+  @media only screen and (max-width : $screen-md) {
+    height: $navbar-sm-height;
+    min-height: $navbar-sm-height;
+  }
+  .navbar {
+    @media only screen and (max-width : $screen-sm) {
+      min-height: $navbar-sm-height;
+    }
+  }
+  .main-nav {
+    height: $main_nav-height;
+    @media only screen and (max-width : $screen-md) {
+      height: $navbar-sm-height;
+    }
+  }
+  .navbar-nav {
+    margin-top: 31px;
+    @media only screen and (max-width : $screen-md) {
+      margin-top: 21px;
+    }
+    @media only screen and (max-width : $screen-sm) {
+      margin: 0;
+      background-color: $navbar--background-color;
+      border-top: 1px solid $navbar--border-top;
+      overflow: hidden;
+      li {
+        border-bottom:1px solid $color-white;
+        a {
+          padding: 13px 12px 11px 13px !important;
+        }
+      }
+      .submenu {
+        position: relative;
+        top:0;
+      }
+    }
+  }
+  .navbar-brand {
+    padding: 0;
+    position: relative;
+    width: 290px;
+    height: 90px;
+    @media only screen and (max-width : $screen-md) {
+      width: 220px;
+      height: 65px;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 9px;
+      @media only screen and (max-width : $screen-md) {
+        top: 1px;
+      }
+    }
+  }
+  #navbar {
+    @media only screen and (max-width : $screen-md) {
+      float: right;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .navbar-nav > li > a {
+    text-transform: uppercase;
+    color: $navbar--color;
+    font-weight: 400;
+    padding:10px 30px 39px 30px;
+    font-size: 17px;
+    @media only screen and (max-width : $screen-lg) {
+        padding:10px 13px 39px 13px;
+    }
+    @media only screen and (max-width : $screen-md) {
+      padding:10px 12px 20px 12px;
+      font-size: 12px;
+    }
+    @media only screen and (max-width : $screen-sm) {
+      font-size: 14px;
+    }
+  }
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus
+  .navbar-nav > li.has-submenu,
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover {
+    color: $color-white;
+    background-color: transparent;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 69px;
+    li {
+      border-top: 1px solid $navbar--priemer-border-bottom;
+      @media only screen and (max-width : $screen-sm) {
+        border-top: 1px solid $navbar--priemer-border-bottom;
+        border-bottom: none;
+        background-color: $navbar--submenu-background-color;
+      }
+      a {
+        background-color: $color-secondary;
+        color: $color-white;
+        padding: 10px 15px;
+        font-size: 15px;
+        display: block;
+        min-width: 230px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        @media only screen and (max-width : $screen-md) {
+          font-size: 12px;
+        }
+        @media only screen and (max-width : $screen-sm) {
+          font-size: 14px;
+          background-color: $navbar--submenu-background-color;
+          color: $navbar--color;
+          width: 100%;
+        }
+      }
+      a:hover {
+        background-color: $dropdown-hover-background-color;
+        color: #fff;
+      }
+    }
+    li.active,
+    li.active a {
+      @media only screen and (max-width : $screen-sm) {
+        background-color: $color-primary;
+      }
+    }
+    @media only screen and (max-width : $screen-md) {
+      top: 50px;
+    }
+    @media screen and (max-width: $screen-sm) {
+      .submenu {
+        position: relative;
+        top: 0;
+        display: none;
+        .active a {
+          //color: $brand-primary;
+        }
+        a {
+          width: 100%;
+          padding-right: 50px !important;
+        }
+      }
+    }
+  }
+
+  .navbar-nav > li.has-submenu:hover > .submenu {
+    display: block;
+  }
+  .toggleSubmenu {
+    display: none;
+  }
+  .navbar-toggle {
+    border: none;
+    margin-top: 18px;
+    margin-bottom: 21px;
+    .icon-bar {
+      background-color: $color-white;
+    }
+  }
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
+    background-color: $dropdown-hover-background-color;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+
+  .has-submenu {
+    a {
+      width: calc(100% - 50px);
+      padding-right: 0 !important;
+      padding-top: $font-size-base !important;
+    }
+    .toggleSubmenu {
+      display: block;
+      width: 50px;
+      height: 47px;
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      right: 0;
+      box-sizing: border-box;
+      padding: 9px 0 0;
+      text-align: center;
+      .fa {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+        padding-top: 3px;
+        font-size: 25px;
+        color: $color-white;
+      }
+      .fa.fa-angle-down.fa-angle-up:before {
+        content: "\f106";
+      }
+    }
+  }
+  .has-submenu.active {
+    .fa:before {
+      //color: $brand-primary;
+    }
+  }
+  .submenu:before,
+  .navbar-nav > li:not(:first-child) > a:before {
+    display: none !important;
+
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav > li.has-submenu:hover > .submenu {
+    display: none;
+  }
+}
+
+.has-filter-link {
+  position: absolute;
+  right: 75px;
+  top: 18px;
+  display: none;
+  @media only screen and (max-width : $screen-sm) {
+    display: block;
+    right: 95px;
+  }
+  @media only screen and (max-width : $screen-xs) {
+    right: 75px;
+  }
+  a {
+    color: $color-white;
+    font-size: 20px;
+    border: 2px solid $color-white;
+    padding: 4px 5px 4px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+// Body mit blau Farbe einfärben
+
+.body_bei_menu_click {
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-secondary;
+    z-index: 9998;
+  }
+}
+// Android Menu in Headroom
+.body_bei_menu_click {
+  overflow: hidden !important;
+  position: relative;
+  .header--fixed {
+    position: fixed;
+    z-index: 9999 !important;
+  }
+  .headroom {
+    &--unpinned {
+      top: 0 !important;
+    }
+  }
+}
+// iPhone Menu in Headroom
+
+.safari.body_bei_menu_click {
+  overflow: hidden !important;
+  .header--fixed {
+    position: fixed;
+    z-index: 9999 !important;
+  }
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+  // iPhone Menu in Headroom
+  .safari.body_bei_menu_click {
+
+  }
+}

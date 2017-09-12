@@ -1,0 +1,47 @@
+.has-contentmenu {
+  background-color: $color-secondary;
+  height: 45px;
+  @media only screen and (max-width : $screen-extra-xs) {
+    height: 39px;
+  }
+  .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      a {
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 17px;
+        line-height: 1;
+        display: block;
+        padding: 10px;
+        @media only screen and (max-width : $screen-sm) {
+          font-size: 14px;
+        }
+        @media only screen and (max-width : $screen-extra-xs) {
+          font-size: 11px;
+        }
+      }
+    }
+    li:not(:last-child) {
+      a {
+        margin-right: 35px;
+        @media only screen and (max-width : $screen-sm) {
+          margin-right: 10px;
+        }
+        @media only screen and (max-width : $screen-extra-xs) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+ul.contentmenu {
+  @media only screen and (max-width : $screen-sm) {
+    text-align: left;
+  }
+}

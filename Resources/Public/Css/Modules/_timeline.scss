@@ -1,0 +1,98 @@
+.timeline {
+  @media screen and (max-width: $screen-sm) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.has-date {
+  -webkit-display: flex;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bulletpoint {
+  display: block;
+  background: $color-primary;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -52px;
+  top: -10px;
+}
+.has-date:nth-of-type(1) {
+  .bulletpoint {
+    width: 33px;
+    height: 33px;
+    left: -60px;
+    top: -16.5px;
+  }
+  .wrapped-data {
+    &:after {
+      height: 89%;
+      top: 28px;
+    }
+  }
+}
+.has-date:nth-last-of-type(1) {
+  .wrapped-data {
+    &:after {
+      display: none;
+    }
+  }
+}
+.wrapped-data {
+  margin-left: 25px;
+  border: 1px solid $color-primary;
+  padding: 13px 5px 4px 0;
+  margin-top: 16.5px;
+  position: relative;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-color: $color-primary;
+    position: absolute;
+    left: -8px;
+    -o-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -webkit-transform: skew(45deg);
+    transform: skew(45deg);
+    top: -1px;
+    background-color: $gray-light;
+  }
+  &:after {
+    content: '';
+    display: block;
+    background: $color-primary;
+    width: 3px;
+    height: 95%;
+    position: absolute;
+    left: -44px;
+    top: 21px;
+  }
+}
+.date {
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    @media screen and (max-width: $screen-xs) {
+      font-size: 18px;
+    }
+  }
+}
+.date-info {
+  p {
+    font-size: 22px;
+    margin-top: -2px;
+    @media screen and (max-width: $screen-xs) {
+      font-size: 16px;
+      padding-left: 15px;
+      margin-top: -1px;
+    }
+  }
+}

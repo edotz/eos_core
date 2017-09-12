@@ -1,0 +1,138 @@
+.has-vehicle_resultlist {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.has-show-result:last-of-type {
+  padding-bottom: 0;
+}
+
+.show-result {
+  a,
+  span {
+    color: $color-secondary;
+  }
+  .view-change {
+    margin-left: 30px;
+  }
+  @media screen and (max-width: $screen-md) {
+    .text-right {
+      text-align: left;
+      margin-top: 15px;
+    }
+  }
+}
+
+.vehicle_resultlist-single {
+  border: 1px solid;
+  border-color: $border-color;
+  background-color: $color-white;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.vehicle_resultlist-single:last-of-type {
+  margin-bottom: 0;
+}
+
+.vehicle_resultlist-single-image {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  img {
+
+  }
+}
+
+.vehicle_resultlist-single-info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+// @todo Schrift in Variablen - RZ lieber hier lassen, ist wirklich nur hier vorhanden
+.vehicle_name {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 1.6;
+}
+
+.price-box {
+  position: relative;
+  .more_button {
+    bottom: 0;
+    right: 15px;
+    @media screen and (max-width: $screen-sm) {
+      position: static;
+      bottom: auto;
+      top: auto;
+      right: auto;
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+}
+
+.vehicle_price {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: $color-secondary;
+}
+
+.netto_price,
+.vehicle_price {
+  display: block;
+  text-align: right;
+  @media screen and (max-width: $screen-sm) {
+    text-align: left;
+  }
+}
+
+.vehicle_technical-data {
+  width: 100%;
+  margin-top: 10px;
+  tbody > tr > td {
+    border-top: 0;
+    padding: 5px 5px 5px 0;
+    line-height: 1;
+    &:first-child {
+      width: 45%;
+    }
+    &:last-child {
+      width: 55%;
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+  }
+}
+
+.f3-widget-paginator {
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    margin-right: 15px;
+    display: inline-block;
+  }
+  .last.next a:after,
+  .previous a:before {
+    content: "\f101";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+  .last.next a:after {
+    content: "\f101";
+    margin-left: 5px;
+  }
+  .previous a:before {
+    content: "\f100";
+    margin-right: 5px;
+  }
+}

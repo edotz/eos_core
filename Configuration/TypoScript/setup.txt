@@ -1,0 +1,99 @@
+plugin.tx_eoscore_pi1 {
+    view {
+        templateRootPaths.0 = {$plugin.tx_eoscore_pi1.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_eoscore_pi1.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_eoscore_pi1.view.layoutRootPath}
+    }
+    persistence {
+      storagePid = {$plugin.tx_eoscore_pi1.persistence.storagePid}
+      classes { 
+        Edotz\EosCore\Domain\Model\SysTemplate {
+          mapping {
+            tableName = sys_template
+              columns {
+                tx_eoscore_google_tracking_id.mapOnProperty = googleTrackingId
+                tx_eoscore_google_api_key.mapOnProperty = googleApiKey
+                tx_eoscore_geo_lat.mapOnProperty = geoLat
+                tx_eoscore_geo_lng.mapOnProperty = geoLng
+                tx_eoscore_company_name.mapOnProperty = companyName
+                tx_eoscore_company_email.mapOnProperty = companyEmail
+                tx_eoscore_company_telephone.mapOnProperty = companyTelephone
+                tx_eoscore_company_logo.mapOnProperty = companyLogo
+              }
+          }
+        }
+      }
+    }
+}
+config.contentObjectExceptionHandler = 0 
+
+temp.template = FLUIDTEMPLATE
+temp.template {
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+        key.data = levelfield:-1, backend_layout_next_level, slide
+        key.override.field = backend_layout
+        default = TEXT
+        default.value = EXT:eos_core/Resources/Private/Templates/Page/Default.html
+    }
+  layoutRootPath = EXT:eos_core/Resources/Private/Layouts/
+  partialRootPath = EXT:eos_core/Resources/Private/Partials/
+  settings {
+      pageUids {
+        home = {$pageUids.home}
+        footer = {$pageUids.footer} 
+        imprint = {$pageUids.imprint}
+        legacy = {$pageUids.legacy}
+        disclaimer = {$pageUids.disclaimer}
+        search = {$pageUids.search}
+        contact = {$pageUids.contact}
+      }
+      company {
+        name = {$company.name}
+        telephone = {$company.telephone}
+        email = {$company.email}
+        youtube = {$company.youtube}
+        twitter = {$company.twitter}
+        facebook = {$company.facebook}
+      }
+    }
+}
+
+page = PAGE
+page.typeNum = 0
+page.meta {
+    X-UA-Compatible = {$page.meta.X-UA-Compatible}
+    viewport = {$page.meta.viewport}
+    robots = {$page.meta.robots}
+    keywords.data = DB:pages:1:keywords
+    keywords.override.field = keywords
+    author.data = DB:pages:1:author
+    author.override.field = author
+    google-site-verification = {$google.site_verification}
+}
+
+page.includeCSS {
+  eos_core = EXT:eos_core/Resources/Public/Css/default.css
+}
+
+page.headerData {
+  10000 = TEXT
+  10000.stdWrap.if.isTrue = {$google.tracking_id} 
+  10000.value (
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{$google.tracking_id}', 'auto');
+    ga('send', 'pageview');
+</script>
+)
+}
+
+page.10 < temp.template
+
+lib.fluidContent.templateRootPaths.10 = EXT:eos_core/Resources/Private/Templates/FluidContent/
+lib.fluidContent.partialRootPaths.10 = EXT:eos_core/Resources/Private/Partials/FluidContent/
+lib.fluidContent.layoutRootPaths.10 = EXT:eos_core/Resources/Private/Layouts/FluidContent/

@@ -1,0 +1,125 @@
+
+
+// Farben -------------------------------------
+$text-color: #686868;
+
+$color-primary: #68B2F2;
+$color-primary-invers: darken($color-primary, 20%);
+
+$color-secondary: #0077B8;
+$color-secondary-transparent: rgba(0, 119, 184, 0.5);
+$color-secondary-transparent-hover: rgba(0, 119, 184, 1);
+$color-secondary-invers: #044467;
+$color-figcaption: #127AB2;
+
+$border-color: #95989A;
+
+
+$color-white: #fff;
+$gray-light: #ECECEC;
+$cookies-color: #CCE6FF;
+// $font-size-base: 12px;
+
+
+
+// Buttons
+$btn-primary-bg: $color-secondary-invers;
+$btn-primary-bg-hover: $color-secondary;
+$btn-primary-border-color: $color-secondary-invers;
+
+// font --------------------------------------------
+
+// @todo wird in _typo.scss überschrieben - nur eine Definition?
+$font-family-sans-serif:  'Titillium Web', sans-serif;
+$headings-color: $color-secondary;
+
+// Import the fonts
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../Fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../Fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+  url("../Fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"),
+  url("../Fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),
+  url("../Fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),
+  url("../Fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../Fonts/icomoon.eot?xi7wfv');
+  src:  url('../Fonts/icomoon.eot?xi7wfv#iefix') format('embedded-opentype'),
+  url('../Fonts/icomoon.ttf?xi7wfv') format('truetype'),
+  url('../Fonts/icomoon.woff?xi7wfv') format('woff'),
+  url('../Fonts/icomoon.svg?xi7wfv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Meta Nav -----------------------------------------
+
+$metanav-background-color: $color-primary;
+$metanav-font-color: #fff;
+$metanav-link-color: $metanav-font-color;
+
+$dropdown-background-color: $color-secondary;
+$dropdown-hover-background-color: #4E9CE0;
+
+
+
+// Navbar -------------------------------------------
+$navbar--border-top: $color-primary;
+$navbar--priemer-border-bottom: $color-primary;
+$navbar--background-color: $color-secondary;
+$navbar--color: $cookies-color;
+$navbar-height:100px;
+$navbar-sm-height: 71px;
+$main_nav-height:90px;
+
+
+
+// Suchformular für Fahrzeuge -----------------------
+
+$startpageform-background-color: $color-secondary;
+$startpageform-input-color: $color-white;
+$startpageform-select-color: $color-secondary-invers;
+$startpageform-select-bg-color: $cookies-color;
+$startpageform-button1-color: $color-secondary;
+$startpageform-button2-color: #1487C6;
+$startpageform-button3-color: #3D9FD5;
+$startpageform-submit-button-bg-hover-color: #0F6796;
+
+$startpageform-button-font-size-xs: 14px;
+$startpageform-border-radius: 10px;
+$startpageform-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.16);
+$navbar--submenu-background-color: $startpageform-button2-color;
+$lg-label-font-size: 14px;
+$md-label-font-size: 15px;
+
+
+// Events / allgemein ---------------------------------
+
+$box-padding: 25px;
+
+
+
+// Thumbnails ----------------------------------------
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           0px;
+//** Thumbnail background color
+//** Thumbnail border color
+$thumbnail-border:            #ddd !default;
+//** Thumbnail border radius
+$thumbnail-border-radius:     $border-radius-base !default;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $text-color !default;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px !default;
+
+// Extra kleine geräte
+$screen-extra-xs:            320px !default;
+
+
+

@@ -1,0 +1,88 @@
+header {
+  .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+.headroom-mask {
+  display: block;
+  width: 100%;
+  height: 141px;
+  @media screen and (max-width: $screen-md) {height: 113px;}
+  @media screen and (max-width: $screen-sm) {}
+  @media screen and (max-width: $screen-xs) {}
+}
+#navbar {
+  @media screen and (max-width: $screen-sm) {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+  }
+}
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out !important;
+  &--unpinned {
+    top: -143px !important;
+  }
+  &--pinned {
+    top: 0 !important;
+  }
+  z-index: 9999;
+}
+
+.meta-nav {
+  background-color: $metanav-background-color;
+  color: $metanav-font-color;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  a {
+    color: $metanav-link-color;
+  }
+  .divider-left {
+    display: inline-block;
+    border-left: 1px solid #fff;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+  @media screen and (max-width: $screen-sm) {
+    .mobile-hidden {
+      display: none;
+    }
+  }
+}
+.container-fluid.meta-nav {
+  .container {
+    @media screen and (max-width: $screen-sm) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+header:after {
+  // alle inklusive Desktop
+  //content: '';
+  display: block;
+  height: $navbar-height;
+  width: 100%;
+  @media screen and (max-width: $screen-sm) {
+    // Tablet
+    height: 108px;
+  }
+}
+.social-media-menu {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 25px;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+  }
+  li:not(:last-child){
+    margin-right: 5px;
+  }
+}

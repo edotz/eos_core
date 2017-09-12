@@ -1,0 +1,71 @@
+.carousel-caption {
+  bottom: 16%;
+  text-align: right;
+  padding-bottom: 0;
+  h2 {
+    color: $color-white;
+    margin-bottom: 5px;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 21px;
+    }
+  }
+  p {
+    font-size: 22px;
+    @media screen and (max-width: $screen-sm) {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    left: auto;
+    right: 15px;
+  }
+}
+.button-box {
+  margin-top: 25px;
+  @media screen and (max-width: $screen-sm) {
+    margin-top: 11px;
+  }
+  a {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: none;
+    line-height: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+  .btn-primary {
+    background-color: $btn-primary-bg;
+    border: 1.5px solid $btn-primary-border-color;
+    color: #fff;
+    &:hover {
+      background-color: $btn-primary-bg-hover;
+    }
+  }
+
+  .button-borded {
+    border: 2px solid $gray-dark;
+    color: $gray-dark;
+  }
+  .button-borded:hover {
+    background-color: $gray-dark;
+    color: #fff;
+  }
+}
+.carousel-indicators {
+  @media screen and (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.carousel-inner > .item > img.img-responsive,
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > picture > img,
+.headerbild .img-responsive {
+  width: 100%;
+}

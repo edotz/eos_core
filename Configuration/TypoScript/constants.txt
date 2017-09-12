@@ -1,0 +1,44 @@
+plugin.tx_eoscore_pi1 {
+  view {
+    # cat=plugin.tx_eoscore_vehiclelist/file; type=string; label=Path to template root (FE)
+    templateRootPath = EXT:eos_core/Resources/Private/Templates/
+    # cat=plugin.tx_eoscore_vehiclelist/file; type=string; label=Path to template partials (FE)
+    partialRootPath = EXT:eos_core/Resources/Private/Partials/
+    # cat=plugin.tx_eoscore_vehiclelist/file; type=string; label=Path to template layouts (FE)
+    layoutRootPath = EXT:eos_core/Resources/Private/Layouts/
+  }
+  persistence {
+    # cat=plugin.tx_eoscore_storagepid//a; type=string; label=Default storage PID
+    storagePid = 
+  }
+}
+page.meta { 
+    # cat=eos_core/Konstanten; type=string; label=X-UA-Compatible 
+    X-UA-Compatible = IE=edge 
+ 
+    # cat=eos_core/Konstanten; type=string; label=Viewport in Head 
+    viewport = width=device-width, initial-scale=1.0, user-scalable=0 
+ 
+    # cat=eos_core/Konstanten; type=string; label=Robots in Head 
+    robots = INDEX,FOLLOW 
+ 
+    # cat=eos_core/Konstanten; type=string; label=Google Site Verification 
+    google-site-verification = 
+}
+
+pageUids {
+  # cat=page; type=int; label=Page Uid Footer
+  footer = 
+  # cat=page; type=int; label=Page Uid Imprint
+  imprint = 
+  # cat=page; type=int; label=Page Uid Legacy
+  legacy = 
+  # cat=page; type=int; label=Page Uid Disclaimer
+  disclaimer =
+  # cat=page; type=int; label=Page Uid Home
+  home = 
+  # cat=page; type=int; label=Page Uid Search
+  search = 
+  # cat=page; type=int; label=Page Uid Contact
+  contact = 
+}
