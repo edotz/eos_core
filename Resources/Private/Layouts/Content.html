@@ -1,0 +1,9 @@
+<f:layout name="Content" />
+<f:if condition="{settings.renderMode} == 'preview'">
+    <f:then>
+        <f:render section="Preview" />
+    </f:then>
+    <f:else>
+        <f:render section="Main" />
+    </f:else>    
+</f:if>

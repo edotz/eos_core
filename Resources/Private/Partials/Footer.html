@@ -1,0 +1,22 @@
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+<footer class="bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <vhs:content.render column="11" order="sorting" render="1" pageUid="{$pageUids.footer}" />
+            </div>
+            <div class="col-md-6">
+                <vhs:content.render column="12" order="sorting" render="1" pageUid="{$pageUids.footer}" />
+			</div>
+		</div>        
+        <div class="row">
+            <ul class="footer-menu">
+            	<li><f:link.page pageUid="{settings.pageUids.imprint}"><vhs:page.info pageUid="{settings.pageUids.imprint}" field="title" /></f:link.page></li>
+            	<li><f:link.page pageUid="{settings.pageUids.disclaimer}"><vhs:page.info pageUid="{settings.pageUids.disclaimer}" field="title" /></f:link.page></li>
+            	<li><f:link.page pageUid="{settings.pageUids.legacy}"><vhs:page.info pageUid="{settings.pageUids.legacy}" field="title" /></f:link.page></li>
+            	<li>&copy; <f:format.date format="Y" date="now" /> {settings.company.name}</li>
+        	</ul>
+        </div>
+    </div>
+    <a href="#defaultPage" class="toTop"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+</footer>

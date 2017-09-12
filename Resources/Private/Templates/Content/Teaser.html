@@ -1,0 +1,31 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+   xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+   xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+   xmlns:v="http://fedext.net/ns/vhs/ViewHelpers">
+   <f:layout name="Content" />
+
+   <f:section name="Configuration">
+      <flux:form id="tsi_teaser" label="Teaser" description="Zeigt maximal 2 Teaser an" options="{icon: '/typo3conf/ext/tsi_site/Resources/Public/Backend/img/Teaser.png'}">
+         <flux:field.inline.fal name="teaser" maxItems="2" allowedExtensions="jpg,png,svg" label="Teaser Bild"/>
+      </flux:form>
+   </f:section>
+<f:section name="Preview">
+      <h2>huhu</h2>
+   </f:section>
+   <f:section name="Main">
+   <div class="container has-teaser-headline">
+       <div class="row">
+          <f:for each="{v:content.resources.fal(field: 'teaser')}" as="fileReference">
+            <div class="col-sm-6">
+               <f:image src="{fileReference.url}"  alt="{fileReference.alternative}" treatIdAsReference="1" class="img-responsive" />
+               <h3><a href="{fileReference.link}">{fileReference.title}</a></h3>
+               <p>{fileReference.description}</p>
+            </div>
+         </f:for>
+       </div>
+   </div>
+   </f:section>
+</div>

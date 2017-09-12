@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-05-02T12:00:00Z" product-name="powermail">
+		<header/>
+		<body>
+            <trans-unit id="slider.title">
+                <source>Slider</source>
+                <target state="translated">Slider</target>
+            </trans-unit>
+            <trans-unit id="slider.description">
+                <source>Image Slider there you can generate a Slider with Images</source>
+                <target state="translated">Generieren eines Bild Sliders</target>
+            </trans-unit>
+            <trans-unit id="headerimage.title">
+                <source>Headerimage</source>
+                <target state="translated">Headerbild</target>
+            </trans-unit>
+            <trans-unit id="headerimage.description">
+                <source>There you can generate a Headerimage</source>
+                <target state="translated">Generieren eines Headerbild</target>
+            </trans-unit>
+            <trans-unit id="ninjagallery.title">
+                <source>Gallery</source>
+                <target state="translated">Galerie</target>
+            </trans-unit>
+            <trans-unit id="ninjagallery.description">
+                <source>Image there you can add Gallery</source>
+                <target state="translated">Bild zur eine Galerie</target>
+            </trans-unit>
+            <trans-unit id="ninjagalleryNoDesc.title">
+                <source>Gallery without image description</source>
+                <target state="translated">Galerie ohne Bildbeschreibung</target>
+            </trans-unit>
+            <trans-unit id="ninjagalleryNoDesc.description">
+                <source>Image there you can add Gallery</source>
+                <target state="translated">Bild ohne Bildbeschreibung zur eine Galerie</target>
+            </trans-unit>
+            <trans-unit id="teaser.title">
+                <source>Teaser Plus</source>
+                <target state="translated">Teaser Plus</target>
+            </trans-unit>
+            <trans-unit id="teaser.description">
+                <source>Image with Description</source>
+                <target state="translated">Bild mit Text</target>
+            </trans-unit>
+            <trans-unit id="teaserstoffe.title">
+                <source>Teaser Galerie</source>
+                <target state="translated">Teaser Galerie</target>
+            </trans-unit>
+            <trans-unit id="teaserstoffe.description">
+                <source>Image with Imagedescription</source>
+                <target state="translated">Bild mit Bildunterschrift</target>
+            </trans-unit>
+            <trans-unit id="pages.tx_tsiseo_h1_logo">
+                <source>Wrap Logo with h1</source>
+                <target>Logo mit h1-Tag umschließen.</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

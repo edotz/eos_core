@@ -1,0 +1,76 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+   xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+   xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+   xmlns:v="http://fedext.net/ns/vhs/ViewHelpers">
+   <f:layout name="Content" />
+
+   <f:section name="Configuration">
+      <flux:form id="tsi_brandslider" label="Brands Slider" description="Zeigt den Brands Slider an" options="{icon: '/typo3conf/ext/tsi_site/Resources/Public/Backend/img/brands.png'}">
+         <flux:field.inline.fal name="BrandsSlider" maxItems="50" allowedExtensions="jpg,png,svg" label="Brands Slider"/>
+         <flux:field.input name="caption" label="Überschrift"/>
+      </flux:form>
+   </f:section>
+    <f:section name="Preview">
+      <div class="container marks">
+		    <div class="row">
+		        <div class="col-md-12">
+		            <h3>Unsere Marken</h3></div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_knaus_01.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_tabbert.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_vantourer_01.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_knaus_01.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_tabbert.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		        <div class="col-md-2 col-xs-6 mark">
+		            <a href="#">
+		                <img src="http://www.suedcaravan.de/uploads/tx_iccore/logo_vantourer_01.png" alt=""
+		                     class="img-responsive">
+		            </a>
+		        </div>
+		    </div>
+		</div>
+   </f:section>
+    <f:section name="Main">
+    <div class="container-fluid bg-grey">
+    <div class="container marks">
+        <h3 class="text-center">{caption}</h3>
+        <div id="owl-brands" class="owl-carousel owl-theme">
+           <f:for each="{v:content.resources.fal(field: 'BrandsSlider')}" as="fileReference">
+           <div class="item">
+              <f:image src="{fileReference.uid}" alt="" class="img-responsive" treatIdAsReference="1" />
+           </div>
+          </f:for>
+        </div>
+        <!-- <a class="owl-btn prev"></a>
+        <a class="owl-btn next"></a> -->
+    </div>
+   </f:section>
+</div>
+ </div>

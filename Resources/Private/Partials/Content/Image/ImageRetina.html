@@ -1,0 +1,9 @@
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+<vhs:resource.image identifier="{image}" treatIdAsUid="1" as="image1">
+    <vhs.variable name="retinaWidthDefault" value="{image1.0.width -> vhs:math.division(b:2)}" />
+    <vhs:variable.set name="imageSrc1" value="{image1.0.source}" />
+</vhs:resource.image>
+<picture>
+    <source media="(screen and (-webkit-min-device-pixel-ratio: 2),screen and (min-resolution: 192dpi),screen and (min-resolution: 2dppx))" srcset="{imageSrc1}">
+    <vhs:resource.image identifier="{image}" width="{retinaWidthDefault}" treatIdAsUid="1" class="img-responsive" alt="{alternative}" additionalAttributes="{style: 'opacity:1;'}" />
+</picture>

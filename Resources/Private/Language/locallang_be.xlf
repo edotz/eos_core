@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1427833048" source-language="en" datatype="plaintext" original="messages" date="2014-02-07T20:22:32Z" product-name="fluid_styled_content">
+		<header/>
+		<body>
+			<trans-unit id="slider.title">
+				<source>Slider</source>
+			</trans-unit>
+		    <trans-unit id="slider.description">
+		        <source>Image Slider there you can add Images</source>
+		    </trans-unit>
+		    <trans-unit id="headerimage.title">
+		        <source>Headerimage</source>
+		    </trans-unit>
+		    <trans-unit id="headerimage.description">
+		        <source>Headerimage there you can add Images</source>
+		    </trans-unit>
+		    <trans-unit id="ninjagallery.title">
+		        <source>Gallery</source>
+		    </trans-unit>
+		    <trans-unit id="ninjagallery.description">
+		        <source>Image there you can add Gallery</source>
+		    </trans-unit>
+		    <trans-unit id="ninjagalleryNoDesc.title">
+		        <source>Gallery without image description</source>
+		    </trans-unit>
+		    <trans-unit id="ninjagalleryNoDesc.description">
+		        <source>Image there you can add Gallery</source>
+		    </trans-unit>
+		    <trans-unit id="teaser.title">
+		        <source>Teaser Plus</source>
+		    </trans-unit>
+		    <trans-unit id="teaser.description">
+		        <source>Image with Description</source>
+		    </trans-unit>
+		    <trans-unit id="teaserstoffe.title">
+		        <source>Teaser Galerie</source>
+		    </trans-unit>
+		    <trans-unit id="teaserstoffe.description">
+		        <source>Image with Imagedescription</source>
+		    </trans-unit>
+		    <trans-unit id="teaserhover.title">
+		        <source>Teaser Hover</source>
+		    </trans-unit>
+		    <trans-unit id="teaserhover.description">
+		        <source>Bild- / Text-Teaser mit Hover Effekt.</source>
+		    </trans-unit>
+		    <trans-unit id="pages.tx_tsiseo_h1_logo">
+                <source>Wrap Logo with h1</source>
+            </trans-unit>
+
+			<trans-unit id="slidersmall.title">
+				<source>Small Slider</source>
+			</trans-unit>
+			<trans-unit id="slidersmall.description">
+				<source>Small Image Slider there you can add Images and Text</source>
+			</trans-unit>
+
+			<trans-unit id="parallax.title">
+				<source>Parallax Element</source>
+			</trans-unit>
+			<trans-unit id="parallax.description">
+				<source>Text with paralax image</source>
+			</trans-unit>
+
+			<trans-unit id="googlemap.title">
+				<source>Google Map</source>
+			</trans-unit>
+			<trans-unit id="googlemap.description">
+				<source>A Google Map With Default Position</source>
+			</trans-unit>
+
+			<!-- Gridelements Text -->
+			<trans-unit id="gridelements.label.col-lg">
+				<source><![CDATA[Large devices Desktops (≥1200px)]]></source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.col-md">
+				<source><![CDATA[Medium devices Desktops (≥992px)]]></source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.col-sm">
+				<source><![CDATA[Small devices Tablets (≥768px)]]></source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.col-xs">
+				<source><![CDATA[Extra small devices Phones (<768px)]]></source>
+			</trans-unit>
+
+			<trans-unit id="gridelements.label.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.layout1">
+				<source>Layout 1</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.layout2">
+				<source>Layout 2</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.layout3">
+				<source>Layout 3</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.layout4">
+				<source>Layout 4</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.layout5">
+				<source>Layout 5</source>
+			</trans-unit>
+			<trans-unit id="gridelements.label.hidden">
+				<source>Hidden</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

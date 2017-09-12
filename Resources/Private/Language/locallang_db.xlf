@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-11-28T15:20:01Z" product-name="ic_core">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.tx_tsicore_imagemode">
+				<source>Image Rendering Mode</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_tsicore_imagemode.1">
+				<source>Srcset (Picturefill)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_tsicore_imagemode.2">
+				<source>Retina (2 Versions)</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tab.configuration">
+				<source>Configuration</source>
+			</trans-unit>
+			<trans-unit id="sys_template.palette.google">
+				<source>Google</source>
+			</trans-unit>
+			<trans-unit id="sys_template.palette.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_google_tracking_id">
+				<source>Google Tracking ID</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_google_api_key">
+				<source>Google Maps API Key</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_google_site_verification">
+				<source>Google Site Verification Code</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_geo_lng">
+				<source>Geo Position Longitude</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_geo_lat">
+				<source>Geo Position Latitude</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_email">
+				<source>E-Mail</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_telephone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="sys_template.tx_tsicore_company_logo">
+				<source>Logo</source>
+			</trans-unit>
+                        <trans-unit id="pages.tx_tsicore_class">
+				<source>CSS Klasse Menu (a-Tag)</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_tsicore_nodesktop">
+				<source>Im Menu ausblenden (Desktop)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

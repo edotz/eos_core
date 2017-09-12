@@ -1,0 +1,16 @@
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+<vhs:resource.image identifier="{image}" treatIdAsUid="1" as="image1">
+    <vhs:variable.set name="imageSrc1" value="{image1.0.source}" />
+</vhs:resource.image>
+<vhs:resource.image identifier="{image}" treatIdAsUid="1" as="image2" width="1400">
+    <vhs:variable.set name="imageSrc2" value="{image2.0.source}" />
+</vhs:resource.image>
+<vhs:resource.image identifier="{image}" treatIdAsUid="1" as="image3" width="1024">
+    <vhs:variable.set name="imageSrc3" value="{image3.0.source}" />
+</vhs:resource.image>
+<picture>
+    <source media="(min-width: 1401px)" srcset="{imageSrc1}">
+    <source media="(min-width: 1025px)" srcset="{imageSrc2}">
+    <source media="(min-width: 801px)" srcset="{imageSrc3}">
+    <vhs:resource.image identifier="{image}" treatIdAsUid="1" class="img-responsive" alt="{alternative}" additionalAttributes="{style: 'opacity:1;'}" />
+</picture>
