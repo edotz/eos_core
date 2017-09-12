@@ -1,0 +1,21 @@
+{
+  "name": "edotz/eos_core",
+  "description": "Edotz typo3 core application extension",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Edotz Staff",
+      "email": "staff@edotz.net",
+      "role": "staff"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "require": {
+    "typo3/cms": ">=7.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Edotz\\EosCore\\": "Classes"
+    }
+  }
+}
