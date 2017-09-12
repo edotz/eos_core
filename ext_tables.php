@@ -7,5 +7,12 @@ if (!defined('TYPO3_MODE')) {
 
 \FluidTYPO3\Flux\Core::registerProviderExtensionKey('eos_core', 'Content');
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+        'Edotz.'. $_EXTKEY,
+        'pi1',
+        'EosCore: Content'
+        );
+
+
 $configurationService = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Edotz\EosCore\Service\ConfigurationService');
 $configurationService->setTypoScriptFromTemplateFields();

@@ -97,3 +97,5 @@ page.10 < temp.template
 lib.fluidContent.templateRootPaths.10 = EXT:eos_core/Resources/Private/Templates/FluidContent/
 lib.fluidContent.partialRootPaths.10 = EXT:eos_core/Resources/Private/Partials/FluidContent/
 lib.fluidContent.layoutRootPaths.10 = EXT:eos_core/Resources/Private/Layouts/FluidContent/
+
+<INCLUDE_TYPOSCRIPT: source="DIR:./Lib" extensions="txt">
