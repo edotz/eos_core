@@ -1,0 +1,17 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:switch expression="{data.imageorient}">
+    <f:case value="2">
+        <h3>Bild</h3>
+        <f:render partial="Header" arguments="{_all}" />
+        <f:render section="Text" arguments="{_all}" />
+    </f:case>
+    <f:case default="TRUE">
+        <f:render partial="Header" arguments="{_all}" />
+        <h3>Bild</h3>
+        <f:render section="Text" arguments="{_all}" />
+    </f:case>
+</f:switch>
+
+<f:section name="Text">
+    <f:format.html>{data.bodytext}</f:format.html>
+</f:section>

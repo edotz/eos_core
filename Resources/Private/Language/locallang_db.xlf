@@ -63,6 +63,15 @@
 			<trans-unit id="pages.tx_eoscore_nodesktop">
 				<source>Im Menu ausblenden (Desktop)</source>
 			</trans-unit>
+			<trans-unit id="newContentElements.tab.eos_content">
+				<source>Eos Content</source>
+			</trans-unit>
+			<trans-unit id="eos_content.index.label">
+				<source>Example</source>
+			</trans-unit>
+			<trans-unit id="eos_content.index.description">
+				<source>Example Description</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

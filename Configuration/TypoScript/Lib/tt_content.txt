@@ -1,0 +1,21 @@
+# Default configuration for content elements which are using FLUIDTEMPLATE directly
+lib.fluidContent >
+lib.fluidContent = FLUIDTEMPLATE
+lib.fluidContent {
+    templateName.stdWrap.cObject = TEXT
+    templateName.stdWrap.cObject.field = CType
+    templateName.stdWrap.cObject.case = ucfirst
+    templateRootPaths {
+        0 = EXT:eos_core/Resources/Private/Templates/CTypes/
+    }
+    partialRootPaths {
+        0 = EXT:eos_core/Resources/Private/Partials/CTypes/
+    }
+    layoutRootPaths {
+        0 = EXT:eos_core/Resources/Private/Layouts/CTypes/
+    }
+    settings {
+    
+    }
+}
+tt_content.textmedia.default =< lib.fluidContent
