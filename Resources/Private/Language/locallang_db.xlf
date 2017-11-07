@@ -3,6 +3,24 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2014-11-28T15:20:01Z" product-name="ic_core">
 		<header/>
 		<body>
+		    <trans-unit id="tx_eoscore_domain_model_realurl">
+                <source>RealUrl dynamic url path configuration</source>
+            </trans-unit>
+            <trans-unit id="tx_eoscore_domain_model_realurl.title">
+                <source>RealUrl dynamic path description:</source>
+            </trans-unit>
+            <trans-unit id="tx_eoscore_domain_model_realurl.realurl_section">
+                <source>RealUrl dynamic path section:</source>
+            </trans-unit>
+            <trans-unit id="tx_eoscore_domain_model_realurl.domain">
+                <source>Domain:</source>
+            </trans-unit>
+            <trans-unit id="tx_eoscore_domain_model_realurl.config">
+                <source>Configuration (JSON-Format):</source>
+            </trans-unit>
+            <trans-unit id="pages.tx_eoscore_realurl">
+                <source>Dynamic url path configuration</source>
+            </trans-unit>
 			<trans-unit id="tt_content.tx_eoscore_imagemode">
 				<source>Image Rendering Mode</source>
 			</trans-unit>
