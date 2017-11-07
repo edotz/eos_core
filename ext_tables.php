@@ -16,3 +16,5 @@ if (!defined('TYPO3_MODE')) {
 
 $configurationService = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Edotz\EosCore\Service\ConfigurationService');
 $configurationService->setTypoScriptFromTemplateFields();
+
+$GLOBALS['PAGES_TYPES']['default']['allowedTables'] .= ',tx_eoscore_domain_model_realurl';

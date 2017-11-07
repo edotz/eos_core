@@ -1,21 +1,98 @@
+temp.templateName = CASE 
+temp.templateName.key.field = CType
+temp.templateName {
+
+  default = TEXT
+  default.field = CType
+  default.field.case = ucfirst
+  
+}    
+
 # Default configuration for content elements which are using FLUIDTEMPLATE directly
-lib.fluidContent >
+lib.contentElement >
+lib.contentElement = COA
+lib.contentElement {
+    
+}
+
+
 lib.fluidContent = FLUIDTEMPLATE
 lib.fluidContent {
-    templateName.stdWrap.cObject = TEXT
-    templateName.stdWrap.cObject.field = CType
-    templateName.stdWrap.cObject.case = ucfirst
+    
+    templateName.cObject < temp.templateName
+    
     templateRootPaths {
         0 = EXT:eos_core/Resources/Private/Templates/CTypes/
+        10 = {$styles.templates.templateRootPath}
     }
     partialRootPaths {
         0 = EXT:eos_core/Resources/Private/Partials/CTypes/
+        10 = {$styles.templates.partialRootPath}
     }
     layoutRootPaths {
-        0 = EXT:eos_core/Resources/Private/Layouts/CTypes/
+        0 = EXT:eos_core/Resources/Private/Layouts/
+        10 = {$styles.templates.layoutRootPath}
     }
     settings {
-    
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+        media {
+            popup {
+                bodyTag = <body style="margin:0; background:#fff;">
+                wrap = <a href="javascript:close();"> | </a>
+                width = {$styles.content.textmedia.linkWrap.width}
+                height = {$styles.content.textmedia.linkWrap.height}
+                crop.data = file:current:crop
+                JSwindow = 1
+                JSwindow {
+                    newWindow = {$styles.content.textmedia.linkWrap.newWindow}
+                    if.isFalse = {$styles.content.textmedia.linkWrap.lightboxEnabled}
+                }
+                directImageLink = {$styles.content.textmedia.linkWrap.lightboxEnabled}
+                linkParams.ATagParams.dataWrap =  class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+            }
+        }
     }
 }
-tt_content.textmedia.default =< lib.fluidContent
+
+tt_content.header =< lib.fluidContent
+
+tt_content.textmedia =< lib.fluidContent
+tt_content.textmedia {
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = assets
+        }
+    }
+}
+
+tt_content.uploads =< lib.fluidContent
+tt_content.uploads {
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = media
+            collections.field = file_collections
+            sorting.field = filelink_sorting
+        }
+    }
+}
+
+tt_content.menu_pages =< lib.fluidContent
+tt_content.menu_pages {
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+            special = list
+            special.value.field = pages
+            includeNotInMenu = 1
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+            }
+        }
+    }
+}
+

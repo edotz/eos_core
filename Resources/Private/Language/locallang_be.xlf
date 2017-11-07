@@ -105,6 +105,33 @@
 			<trans-unit id="gridelements.label.hidden">
 				<source>Hidden</source>
 			</trans-unit>
+                        <trans-unit id="task.maillogs.name">
+				<source>Mail Log File</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.description">
+				<source>Sends logfiles to a given email address</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.recipient">
+				<source>Empfänger</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.subject">
+				<source>Betreff</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.logfile">
+				<source>Logfile</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.error">
+				<source>Bitte Feld "%s" überprüfen.</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.error_logdir">
+				<source>Extension configuration überprüfen: Kein Log Directory gefunden.</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.error_logfiles">
+				<source>Log Directory überprüfen: Keine Dateien gefunden.</source>
+			</trans-unit>
+                        <trans-unit id="task.maillogs.error_logfile">
+				<source>Keine Log Datei gefunden: </source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

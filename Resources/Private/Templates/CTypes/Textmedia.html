@@ -1,17 +1,148 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
-<f:switch expression="{data.imageorient}">
-    <f:case value="2">
-        <h3>Bild</h3>
-        <f:render partial="Header" arguments="{_all}" />
-        <f:render section="Text" arguments="{_all}" />
-    </f:case>
-    <f:case default="TRUE">
-        <f:render partial="Header" arguments="{_all}" />
-        <h3>Bild</h3>
-        <f:render section="Text" arguments="{_all}" />
-    </f:case>
-</f:switch>
+
+<f:if condition="{files}">
+	<f:then>
+		<div class="cType_textpic global__item--centered clearfix">
+			<f:switch expression="{data.imageorient}">
+			    <f:case value="10">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="col-sm-10 text--wrap">
+			            <f:render section="Text" arguments="{_all}" />
+			        </div>
+			        
+			        <div class="img--bottom img--row-wrapper clearfix">
+			            <f:render section="ImgRow" arguments="{_all}" />
+			        </div>
+			    </f:case>
+			    
+			    <f:case value="17">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="img--right">
+			            <f:render section="Img" arguments="{_all}" />
+			        </div>
+			        
+			        <f:render section="Text" arguments="{_all}" />
+			    </f:case>
+			    
+			    <f:case value="18">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="img--left">
+			            <f:render section="Img" arguments="{_all}" />
+			        </div>
+			        
+			        <f:render section="Text" arguments="{_all}" />
+			    </f:case>
+			    
+			    <f:case value="25">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="col__img col__img--right col-xs-12 col-sm-6">
+			            <f:render section="Img" arguments="{_all}" />
+			        </div>
+			        
+			        <div class="col__text col__text--left col-xs-12 col-sm-6">
+			            <f:render section="Text" arguments="{_all}" />
+			        </div>
+			    </f:case>
+			    
+			    <f:case value="26">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="col__img col__img--left col-xs-12 col-sm-6">
+			            <f:render section="Img" arguments="{_all}" />
+			        </div>
+			        
+			        <div class="col__text col__text--right col-xs-12 col-sm-6">
+			            <f:render section="Text" arguments="{_all}" />
+			        </div>
+			    </f:case>
+			    
+			    
+			    <f:case default="TRUE">
+			        <f:render partial="Header" arguments="{_all}" />
+			        
+			        <div class="img--top img--row-wrapper clearfix">
+			            <f:render section="ImgRow" arguments="{_all}" />
+			        </div>
+			        
+			        <div class="col-sm-10 text--wrap">
+			            <f:render section="Text" arguments="{_all}" />
+			        </div>
+			    </f:case>
+			</f:switch>
+		</div>
+	</f:then>
+	
+	<f:else>
+	   <div class="cType_text global__item--centered clearfix">
+	       <f:render partial="Header" arguments="{_all}" />
+	       <div class="col-sm-10 text--wrap"><f:render section="Text" arguments="{_all}" /></div>
+	   </div>
+	</f:else>
+</f:if>
 
 <f:section name="Text">
-    <f:format.html>{data.bodytext}</f:format.html>
+    <f:if condition="{data.bodytext}"><f:format.html>{data.bodytext}</f:format.html></f:if>
+</f:section>
+
+
+<f:section name="Img">
+	<f:for each="{files}" as="item" iteration="itemIterator">
+		<f:if condition="{item.link}">
+	        <f:then>
+	            <f:link.typolink parameter="{item.link}" title="{item.title}">
+	                <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+	            </f:link.typolink>
+	        </f:then>
+	        <f:else>
+	            <f:if condition="{data.image_zoom}">
+	                <f:then>
+	                    <f:link.typolink parameter="{item.publicUrl}" title="{item.title}" class="imageGallery">
+	                        <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+	                    </f:link.typolink>
+	                </f:then>
+	                <f:else>
+	                    <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+	                </f:else>
+	            </f:if>
+	        </f:else>
+	    </f:if>
+	    
+	    <f:if condition="{item.description}">
+	        <span class="descr clearfix"><f:format.html>{item.description}</f:format.html></span>
+	    </f:if>
+	</f:for>
+</f:section>
+
+<f:section name="ImgRow">
+    <f:for each="{files}" as="item" iteration="itemIterator">
+        <div class="img--row">
+        <f:if condition="{item.link}">
+            <f:then>
+                <f:link.typolink parameter="{item.link}" title="{item.title}">
+                    <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+                </f:link.typolink>
+            </f:then>
+            <f:else>
+                <f:if condition="{data.image_zoom}">
+                    <f:then>
+                        <f:link.typolink parameter="{item.publicUrl}" title="{item.title}" class="imageGallery">
+                            <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <f:image class="img-responsive" src="{item.publicUrl}" width="{dimensions.width}" height="{dimensions.height}" alt="{item.alternative}" title="{item.title}" />
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+        
+        <f:if condition="{item.description}">
+            <span class="descr clearfix"><f:format.html>{item.description}</f:format.html></span>
+        </f:if>
+        </div>
+    </f:for>
 </f:section>

@@ -1,0 +1,13 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:if condition="{menu}">
+    <h2>{data.header}</h2>
+    <ul>
+        <f:for each="{menu}" as="page">
+            <li>
+                <a href="{page.link}" target="{page.target}" title="{page.title}">
+                    <span>{page.title}</span>
+                </a>
+            </li>
+        </f:for>
+    </ul>
+</f:if>

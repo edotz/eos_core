@@ -1,0 +1,2 @@
+# cat=basic/logDir; type=string; label=Log Directory:Relative path to log directory  
+logDir = 
